@@ -1,0 +1,32 @@
+.item{
+	padding: 10rem 0 7rem;
+	border-bottom: 1px solid #c9e3e7;
+	&__items{
+		@include align-items(stretch);
+	}
+	&__block{
+		width: (100%/3);
+		border-right: 1px solid #c9e3e7;
+		padding: .5rem 2rem 4rem;
+		&:last-child{
+			border-right: none;
+		}
+		@include br2{
+			border-bottom: 1px solid #c9e3e7;
+			border-right: none;
+			width: 100%;		
+			padding-top: 4rem;
+			&:last-child{
+				border-bottom: none;
+			}
+		}
+	}
+	&__head{
+		font: 2.2rem $HB;
+		color: #000;
+	}
+	&__img{
+		height: 145px;
+		@extend %center-flex;
+	}
+}

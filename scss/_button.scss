@@ -1,0 +1,14 @@
+.btn{
+	width: 43.4rem;
+	height: 7.3rem;
+	background-color: #ffe63d;
+	@extend %center-flex;
+	font: 2rem $HB;
+	text-transform: uppercase;
+	max-width: 100%;
+	padding: 0 1rem;
+	&:hover{
+		background: $pink-color;
+		color: $menu-color;
+	}
+}

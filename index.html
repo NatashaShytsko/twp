@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Top Workout Programms</title>
+	<link rel="stylesheet" href="css/style.min.css"/>
+</head>
+<body>
+	<header class="header">
+		<div class="header__top d_flex">
+			<div class="logo"><a href="#"><img src="img/logo.png" alt=""></a></div>
+			<nav>
+				<div id="pull"><a href="#"   class="navbar-toggle">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a></div>
+				<ul class="menu big">
+					<li><a href="#">HOME</a></li>
+					<li><a href="#">ABOUT US</a></li>
+					<li><a href="#">WORKOUT PLANS</a></li>
+					<li><a href="#">WORKOUT TYPES</a></li>
+					<li><a href="#">BLOG</a></li>
+					<li class="active"><a href="#">Find a  WORKOUT </a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="header__main white">
+			<div class="header__blue"><span class="bg-blue">Behind every fit body is a soulmate workout.</span></div>
+			<div class="header__pink"><span class="bg-pink">FIND A WORKOUT PLAN</span></div>
+			<div class="header__for-you"><span>THAT IS PERFECT FOR YOU</span></div>
+			<div class="quote d_flex">
+				<div class="quote__main d_flex">
+					<div class="quote__img"><img src="img/courtney.png" alt=""></div>
+					<div class="quote__text text">
+						<p>"Thinking about which workout to go with gave me so much decision fatigue. Top Workout Programs removed that stress by choosing the perfect workout for me based on my BMI, fitness capabilities and goals. Now, my workout plan - and my amazing transformation - is automatic."</p>
+						<p class="name pink">Courtney Fay</p>
+					</div>
+				</div>
+				<div class="quote__btn big text-center"><a href="#plans"><img class="sblack" src="img/search.svg" alt=""><img class="swhite" src="img/search-white.svg" alt=""><p>Let's get started</p></a></div>
+
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="plans white bg-blue container-find filter_page" id="plans">
+			<div class="plans__head plans__head-big text-center">Find a Plan</div>
+			<div class="plans__head plans__head-small big text-center">5 quick steps</div>
+			<div class="container mx-auto">
+				<div class="fusion-column-content"><div class="custom-loading fade-out"> loading ...</div>
+				<div class="find_content reveal" id="gotosteps" style="">
+					<div class="find_steps">
+						<div class="step_progress">
+							<div class="step_inv">
+								<div class="step_1"><span>1</span></div>
+								<div class="step_2"><span>2</span></div>
+								<div class="step_3"><span>3</span></div>
+								<div class="step_4"><span>4</span></div>
+								<div class="step_5"><span>5</span></div>
+							</div>
+							<div class="step_bar">
+								<div class="step_1"><span>1</span></div>
+								<div class="step_2"><span>2</span></div>
+								<div class="step_3"><span>3</span></div>
+								<div class="step_4"><span>4</span></div>
+								<div class="step_5"><span>5</span></div>
+							</div>
+							<div class="highlight_current_step"> 
+								<span class="gender highlightStep">Gender</span> 
+								<span class="age">Age</span> 
+								<span class="height">Height</span>
+								<span class="weight">Weight</span>
+								<span class="fitness_goals">Fitness Goals</span>
+							</div> 
+							<!-- <span class="number_steps">1 out of 5</span> -->
+						</div>
+						<div class="choose">Choose an option below</div>
+						<form  id="steps_form">
+							<div class="find_step find_step1">
+								<!-- <div class="find_step_start">Let's get started</div> -->
+								<h4 class="margintop0">I am a:</h4>
+								<div class="find_step_content find_step_content_one">
+									<div class="first_step_div"> 
+										<a class="start-survey" href="#man" n_mask="male"><img class="sblack" src="img/man.svg" alt=""><img class="swhite" src="img/man-w.svg" alt="">man </a>
+										<a class="start-survey" href="#woman" n_mask="female"><img class="sblack" src="img/woman.svg" alt=""><img class="swhite" src="img/woman-w.svg" alt="">woman </a>
+										<input type="hidden" id="input_step1" name="f_workout_program_gender_focus1" value="">
+									</div> 
+									<input type="hidden" id="input_step1" name="f_workout_program_gender_focus1" value="">
+									<div class="class-next-step"> 
+										<a class="btn-step-next" href="#next" step_next="2">
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="find_step find_step2 hideStepp">
+									<h4 class="margintop0">My age is:</h4>
+									<div class="find_step_content find_step_content_two">
+										<div class="step_2_years"> 
+											<div class="step_years_right">
+												<img src="img/calendar.svg" alt="">
+												<div class="modify-year"> 
+													<input class="input_arrows2 data-hj-whitelist" id="input_years" name="f_workout_program_age_group_fit1" type="text" placeholder="- -" pattern="\d*" onkeypress="return isNumber(event);" maxlength="2" value="" data-hj-whitelist="">
+												</div>
+												<div class="arrowstopbot"> 
+													<i class="fa icon-up" aria-hidden="true" id="add2"></i> 
+													<i class="fa icon-down" aria-hidden="true" id="minus2"></i>
+												</div>
+												<span class="after-text">YEARS</span>
+											</div>
+										</div>
+										<div class="class-prev-step"> 
+											<a class="btn-step-prev" href="#prev" step_prev="1">
+												<i class="icon-left"></i> 
+											</a>
+										</div>
+										<div class="class-next-step"> 
+											<a class="btn-step-next" href="#next" step_next="3"> 
+												<i class="icon-right"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="find_step find_step3 hideStepp">
+									<h4 class="margintop0">My height is:</h4>
+									<div class="find_step_content find_step_content_three">
+										<div class="step_3_height"> 
+											<img src="img/resize.svg" alt="">
+											<div class="ft-single inputs_change">
+												<div class="modify-ft"> 
+													<input class="input_arrows3 inputs_step3 data-hj-whitelist" id="input_ft" name="input_ft1" type="text" value="" placeholder="-" pattern="\d*" onkeypress="return isNumber(event)" maxlength="1" data-hj-whitelist="">
+												</div>
+												<div class="arrowstopbot"> 
+													<i class="fa icon-up" aria-hidden="true" id="add3"></i> 
+													<i class="fa icon-down" aria-hidden="true" id="minus3"></i>
+												</div> 
+												<span class="after-text">FT.</span>
+											</div>
+											<div class="in-single inputs_change">
+												<div class="modify-in"> 
+													<input class="input_arrows4 inputs_step3 data-hj-whitelist" id="input_in" name="input_in1" type="text" value="" placeholder="- -" pattern="\d*" onkeypress="return isNumber(event)" maxlength="2" data-hj-whitelist="">
+												</div>
+												<div class="arrowstopbot"> 
+													<i class="fa icon-up" aria-hidden="true" id="add4"></i> 
+													<i class="fa icon-down" aria-hidden="true" id="minus4"></i>
+												</div> 
+												<span class="after-text">IN.</span>
+											</div>
+										</div>
+										<div class="class-prev-step"> 
+											<a class="btn-step-prev" href="#prev" step_prev="2">
+												<i class="icon-left"></i> 
+											</a>
+										</div>
+										<div class="class-next-step"> 
+											<a class="btn-step-next" href="#next" step_next="4"> 
+												<i class="icon-right"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="find_step find_step4 hideStepp">
+									<h4 class="margintop0">My weight is:</h4>
+									<div class="find_step_content find_step_content_four">
+										<div class="step_4_lbs"> 
+											<img src="img/scale.svg" alt="">
+											<div class="modify-lbs"> 
+												<input class="input_arrows5 data-hj-whitelist" id="input_lbs" name="f_workout_program_body_type_bmi_fit1" type="text" value="" placeholder="- - -" pattern="\d*" onkeypress="return isNumber(event)" maxlength="3" data-hj-whitelist="">
+											</div>
+											<div class="arrowstopbot"> 
+												<i class="fa icon-up" aria-hidden="true" id="add5"></i> 
+												<i class="fa icon-down" aria-hidden="true" id="minus5"></i>
+											</div> 
+											<span class="after-text">LBS</span>
+										</div>
+										<div class="class-prev-step"> 
+											<a class="btn-step-prev" href="#prev" step_prev="3">
+												<i class="icon-left"></i> 
+											</a>
+										</div>
+										<div class="class-next-step"> 
+											<a class="btn-step-next" href="#next" step_next="5" style="display: none;"> 
+												<i class="icon-right"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="find_step find_step5 hideStepp">
+									<h4 class="margintop0">My goals are:<span class="note">(Choose ALL that apply)</span></h4>
+									<div class="find_step_content find_step_content_five">
+										<ul class="clearfix">
+											<li class="Building_Muscle">
+												<div class="input_single"> 
+													<input class="data-hj-whitelist" type="checkbox" name="f_workout_programs_fitness_goals20" value="building_muscle" id="f_workout_programs_fitness_goals20" data-hj-whitelist="">
+													<label for="f_workout_programs_fitness_goals20"></label> 
+													<span>Building Muscle</span>
+												</div>
+											</li>
+											<li class="Fat_Burning">
+												<div class="input_single"> 
+													<input class="data-hj-whitelist" type="checkbox" name="f_workout_programs_fitness_goals21" value="fat_burning" id="f_workout_programs_fitness_goals21" data-hj-whitelist="">
+													<label for="f_workout_programs_fitness_goals21"></label> 
+													<span>Fat Burning</span>
+												</div>
+											</li>
+											<li class="Body_Transformation">
+												<div class="input_single"> 
+													<input class="data-hj-whitelist" type="checkbox" name="f_workout_programs_fitness_goals22" value="body_transformation" id="f_workout_programs_fitness_goals22" data-hj-whitelist="">
+													<label for="f_workout_programs_fitness_goals22"></label> 
+													<span>Body Transformation</span>
+												</div>
+											</li>
+											<li class="Bikini_Body">
+												<div class="input_single"> 
+													<input class="data-hj-whitelist" type="checkbox" name="f_workout_programs_fitness_goals23" value="bikini_body" id="f_workout_programs_fitness_goals23" data-hj-whitelist="">
+													<label for="f_workout_programs_fitness_goals23"></label> 
+													<span>Bikini Body</span>
+												</div>
+											</li>
+											<li class="Gain_Strength">
+												<div class="input_single"> 
+													<input class="data-hj-whitelist" type="checkbox" name="f_workout_programs_fitness_goals24" value="gain_strength" id="f_workout_programs_fitness_goals24" data-hj-whitelist="">
+													<label for="f_workout_programs_fitness_goals24"></label> 
+													<span>Gain Strength</span>
+												</div>
+											</li>
+											<li class="Ab_Focused">
+												<div class="input_single"> 
+													<input class="data-hj-whitelist" type="checkbox" name="f_workout_programs_fitness_goals25" value="ab_focused" id="f_workout_programs_fitness_goals25" data-hj-whitelist="">
+													<label for="f_workout_programs_fitness_goals25"></label> 
+													<span>Ab Focused</span>
+												</div>
+											</li>
+											<li class="Core_Fitness">
+												<div class="input_single"> 
+													<input class="data-hj-whitelist" type="checkbox" name="f_workout_programs_fitness_goals26" value="core_fitness" id="f_workout_programs_fitness_goals26" data-hj-whitelist="">
+													<label for="f_workout_programs_fitness_goals26"></label> 
+													<span>Core Fitness</span>
+												</div>
+											</li>
+											<li class="Functional_Fitness">
+												<div class="input_single"> 
+													<input class="data-hj-whitelist" type="checkbox" name="f_workout_programs_fitness_goals27" value="functional_fitness" id="f_workout_programs_fitness_goals27" data-hj-whitelist="">
+													<label for="f_workout_programs_fitness_goals27"></label> 
+													<span>Functional Fitness</span>
+												</div></li>
+												<li class="Pregnancy">
+													<div class="input_single"> 
+														<input class="data-hj-whitelist" type="checkbox" name="f_workout_programs_fitness_goals28" value="pregnancy" id="f_workout_programs_fitness_goals28" data-hj-whitelist="">
+														<label for="f_workout_programs_fitness_goals28"></label> 
+														<span>Pregnancy</span>
+													</div>
+												</li>
+												<li class="Post_Pregnancy">
+													<div class="input_single"> 
+														<input class="data-hj-whitelist" type="checkbox" name="f_workout_programs_fitness_goals29" value="post_pregnancy" id="f_workout_programs_fitness_goals29" data-hj-whitelist="">
+														<label for="f_workout_programs_fitness_goals29"></label> 
+														<span>Post Pregnancy</span>
+													</div>
+												</li>
+											</ul>
+											<div class="class-prev-step"> 
+												<a class="btn-step-prev" href="#prev" step_prev="4">
+													<i class="icon-left"></i> 
+												</a>
+											</div>
+
+											<div class="class-submit-step"> 
+												<input type="hidden" name="pageId" value="1389">
+												<input type="submit" value="Find a workout plan" class="btn-step-submit">
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="something">
+				<div class="something__block white">
+					<div class="something__head head big">What is the key to making exercise</div>
+					<div class="headline pink">something you love?</div>
+					<div class="something__text text">First, it’s all about finding your soulmate — your soulmate workout, that is! If you don’t love it, you won’t stick with it in the long run. Second, it’s about consistency. With hundreds of convenient workout programs to choose from, Top Workout Programs makes both of these goals possible. Once you have them nailed down, your body starts releasing “happy hormones,” causing you to not only love your workouts, but to crave them. Before you know it, exercise has become a part of your lifestyle — and so has a lean, chiseled body.</div>
+					<div class="headline pink">Want to sweat smarter?</div>
+					<div class="something__text text"><i>A small tweak to your workout routine may be all you need for major breakthrough.</i>Take the Top Workout Programs survey and get expert-recommended workouts so you can push past plateaus and hit your goals.</div>
+					<div class="somesing__btn"><a href="#" class="btn"><span>Get Started</span></a></div>
+				</div>
+			</div>
+			<div class="how">
+				<div class="how__block">
+					<div class="headline pink">How it Works</div>
+					<div class="how__text text">Top Workout Programs combines a simple fitness questionnaire with a powerful search engine to match you with the right fitness solutions based on your goals, body mass index (BMI) and personal preferences.</div>
+					<div class="how__text text">To get started, you just have to answer a few questions. Then, you’ll be presented with  programs targeted to your criteria out of hundreds of options in an instant — no logins or account creation is necessary. Top Workout Programs can suggest a wide variety of fitness solutions, including yoga, strength training and cardio for busy, on-the-go adults.</div>
+					<div class="how__text text">Unlike other search tools, Top Workout Programs takes into careful consideration your BMI, in addition to your goals and preferred exercise format. As a result, you’ll uncover workout solutions that align precisely to your body’s makeup and your unique needs, ensuring more extraordinary results.</div>
+				</div>
+			</div>
+			<div class="find">
+				<div class="find__block">
+					<div class="headline pink">Find your fit</div>
+					<div class="find__text text white">Our mission is to give busy individuals the empowering tools they need to not only find their “fit,” but to find themselves.</div>
+					<div class="somesing__btn"><a href="#" class="btn"><span>Find Your Fit</span></a></div>
+				</div>
+			</div>
+			<div class="list d_flex">
+				<div class="list__block">
+				<div class="headline pink">Multiple Search Filters</div>
+				<div class="list__head head big">for Precise Results</div>
+				<div class="list__text text">Deciding on a workout can be overwhelming. Whether you want to slim down, tone up or just maintain your current weight, how do you know if a workout will really help you achieve your goals?</div>
+				<div class="list__text text">Top Workout Programs takes the guesswork and frustration out of finding the right workout program. By integrating multiple smart-search filters, Top Workout Programs can recommend workouts based your Body Mass Index, personal fitness goals and many other key parameters. In just a few clicks, you’ll have a list of the perfect fitness programs that match your criteria and are geared to get you the results you want.</div>
+				 </div>
+				<div class="list__items">
+					<div class="list__item">
+						<div class="list__img"><img src="img/filter_1.svg" alt=""></div>
+						<div class="list__item-text">
+							<div class="list__item-head pink headline">Body Mass index (BMI)</div>
+							<div class="list__item-textline text">Not all bodies are created equal; therefore, the same kind of training routine will not work for every BMI. Top Workout Programs searches for workout programs that your body will respond to, based on your BMI.</div>
+						</div>
+					</div>
+					<div class="list__item">
+						<div class="list__img"><img src="img/filter_2.svg" alt=""></div>
+						<div class="list__item-text">
+							<div class="list__item-head pink headline">Personal Goals</div>
+							<div class="list__item-textline text">No matter what you want to achieve - dropping weight, melting fat, sculpting muscle or improving core strength - Top Workout Programs can recommend workout plans designed to help you reach your goals.</div>
+						</div>
+					</div>
+					<div class="list__item">
+						<div class="list__img"><img src="img/filter_3.svg" alt=""></div>
+						<div class="list__item-text">
+							<div class="list__item-head pink headline">Exercise Type</div>
+							<div class="list__item-textline text">Filter your results based on your preferred exercise type. Kickboxing, low-impact, martial arts, pilates and yoga workouts are just a small sample out of hundreds of workout plan options. Nowhere else can you find this level of exercise variety.</div>
+						</div>
+					</div>
+					<div class="list__item">
+						<div class="list__img"><img src="img/filter_4.svg" alt=""></div>
+						<div class="list__item-text">
+							<div class="list__item-head pink headline">Workout Format</div>
+							<div class="list__item-textline text">Do you prefer portable, pack-and-go workouts? Zero equipment? Or heavy equipment usage? What about individual or group-based workouts? With Top Workout Programs, we can recommend workout plans that meet your format preference.</div>
+						</div>
+					</div>
+					<div class="list__item">
+						<div class="list__img"><img src="img/filter_5.svg" alt=""></div>
+						<div class="list__item-text">
+							<div class="list__item-head pink headline">Workout Location</div>
+							<div class="list__item-textline text">Searching by home-based, gym, outdoor or anywhere workout plans gives you total location freedom.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="review">
+				<div class="container mx-auto">
+					<div class="review__head pink text-center text"><span>By incorporating a wide range of fitness decision-making criteria in its search, Top Workout Programs eliminates all of the anxiety you once had about finding the perfect fitness plan.</span></div>
+					<div class="review__cloud d_flex">
+						<div class="review__img"><img src="img/pohl.png" alt=""></div>
+						<div class="review__text text white">
+							<p>Top Workout Programs has completely changed my life. It’s so much more than just a workout search tool. I’ve realized that I can love my workouts and be in control of my fitness outcomes.</p>
+							<div class="review__name pink"><span>Matthew Pohl</span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="smarter">
+				<div class="smarter__block">
+					<div class="headline pink">Sweat Smarter, </div>
+				<div class="smarter__head head big">Not Harder</div>
+					<div class="smarter__text text">Top Workout Programs lays the groundwork for success by recommending workouts that can be done on your own time and wherever you want. And convenience plus preparation is one of the best formulas for ensuring a sweat session actually happens! To find that perfect fit, Top Workout Programs offers:</div>
+					<div class="smarter__blue bg-blue white">Top Workout Takes the Guesswork Out of Meal Planning</div>
+					<div class="text smarter__italic"><i>When you’re following a workout plan, deciding what to eat and how much to eat can be overwhelming.</i></div>
+					<div class="smarter__btn-block">
+						<div class="text">Top Workout Programs lays the groundwork for success by recommending workouts that can be done on your own time and wherever you want. And convenience plus preparation is one of the best formulas for ensuring a sweat session actually happens! To find that perfect fit, Top Workout Programs offers:</div>
+						<div class="smarter__btn"><a href="#" class="btn"><span>Get Started</span></a></div>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="container mx-auto">
+					<div class="item__items d_flex text-center">
+						<div class="item__block">
+							<div class="item__head">Lifestyle-Based Workouts</div>
+							<div class="item__img"><img src="img/item_1.svg" alt=""></div>
+							<div class="item__text text">We can recommend many “rise-and-sweat” plans for morning people, as well as quick routines that you can do at night after a hectic work day.</div>
+						</div>
+						<div class="item__block">
+							<div class="item__head">Equipment-free Formats</div>
+							<div class="item__img"><img src="img/item_2.svg" alt=""></div>
+							<div class="item__text text">The majority of Top Workout Program’s plans are designed to be equipment-free - no bulky gear required.</div>
+						</div>
+						<div class="item__block">
+							<div class="item__head">Amazing Variety</div>
+							<div class="item__img"><img src="img/item_3.svg" alt=""></div>
+							<div class="item__text text">Our workout plans go beyond home-based formats. Choose from workouts that can be done from virtually anywhere, including the park, the hotel room or your favorite gym.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="benefits">
+				<div class="container mx-auto">
+				<div class="headline text-center">Top Workout Programs <span class="pink">Benefits</span></div>
+					<div class="benefits__items d_flex">
+						<div class="benefits__item">
+							<div class="benefits__head"><span class="white headline">No Equipment <br> Needed</span></div>
+							<div class="benefits__text text">Most Top Workout Programs recommended plans don’t require any equipment — just a pair of good sneakers. For strength training plans, you may want to acquire a set of light, medium and heavy weights.</div>
+						</div>
+						<div class="benefits__item">
+							<div class="benefits__head"><span class="white headline">Variety <br> You’ll Never Get Bored</span></div>
+							<div class="benefits__text text">You need a workout program that keeps you on a constant journey. As you advance in your fitness ability, Top Workout Programs will be right there with you to recommend even greater fitness variety and challenges. This ensures that you never hit a “progress plateau.”</div>
+						</div>
+						<div class="benefits__item">
+							<div class="benefits__head"><span class="white headline">Next&#8209;Level <br> Nutrition</span></div>
+							<div class="benefits__text text">You’ll never have to endure boring diets again. Many  Top Workout Program shortlisted workouts come with a meal plan that’s both satisfying and seriously good for you. Plus, snacks to curb cravings, keep blood sugar steady and your energy high.</div>
+						</div>
+						<div class="benefits__item">
+							<div class="benefits__head"><span class="white headline">No Stress, <br> No Pressure</span></div>
+							<div class="benefits__text text">If your to-do list is already overflowing, Top Workout Programs gives you the freedom to fit in a workout when it’s best for your schedule. That’s the beauty of these  plans — zero stress, total empowerment.</div>
+						</div>
+						<div class="benefits__item">
+							<div class="benefits__head"><span class="white headline">Avoid <br> the Crowds</span></div>
+							<div class="benefits__text text">Avoid crowded gyms and group exercise classes. With Top Workout Programs selected workouts, you can melt fat, sculpt muscle and get lean at home, your hotel room or outdoors. Just press play!</div>
+						</div>
+						<div class="benefits__item">
+							<div class="benefits__head"><span class="white headline">Stay Active When <br> You’re On the Go</span></div>
+							<div class="benefits__text text">The  plans are designed for on-the-go lifestyles. With so many portable options to choose from, Top Workout Programs allows you to sweat wherever you are and never miss a workout.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+				<div class="review">
+				<div class="container mx-auto">
+					<div class="review__cloud d_flex">
+						<div class="review__img"><img src="img/richards.png" alt=""></div>
+						<div class="review__text text white">
+							<p>Working out used to be so stressful. But Top Workout Programs put me in touch with a plan that’s fun, satisfying and sustainable — which is the key to making exercise programs really stick. If you have a workout you hate, why put yourself through that?</p>
+							<div class="review__name pink"><span>Craig Richards</span></div>			
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="start">
+				<div class="container text-center mx-auto">
+					<div class="start__head white">Finally – a fitness destination that takes the guess work out of picking the right workout program. Curious about how it works?</div>
+					<div class="headline"><span class="white">There’s no risk to try.</span><br><span class="pink">Find your fit today!</span></div>
+					<div class="start__btn"><a href="#" class="btn"><span>start my search</span></a></div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="container mx-auto text-center">
+				<div class="logo"><a href="#"><img src="img/logo.png" alt=""></a></div>
+				<div class="footer__menu big">
+					<ul>
+						<li><a href="#">HOME</a></li>
+						<li><a href="#">FIND A WORKOUT PLAN</a></li>
+						<li><a href="#">WORKOUT ROUTINES</a></li>
+						<li><a href="#">ABOUT US</a></li>
+						<li><a href="#">CONTACT</a></li>
+						<li><a href="#">BLOG</a></li>
+						<li><a href="#">DISCLAIMER</a></li>
+						<li><a href="#">TERMS OF USE</a></li>
+						<li><a href="#">PRIVACY POLICY</a></li>
+						<li><a href="#">COPYRIGHT POLICY</a></li>
+					</ul>
+				</div>
+				<div class="footer__social">
+					<ul>
+						<li><a href="#"><i class="icon-facebook"></i></a></li>
+						<li><a href="#"><i class="icon-twitter"></i></a></li>
+						<li><a href="#"><i class="icon-google"></i></a></li>
+						<li><a href="#"><i class="icon-linkedin"></i></a></li>
+					</ul>
+				</div>
+				<div class="footer__copyright">© 2019 Top Workout Programs. All Rights Reserved.</div>
+			</div>
+		</footer>
+		<div class="sosial white">
+			<ul class="essb_links_list">
+				<li class="essb_item essb_link_facebook nolightbox"> 
+					<a href="https://www.facebook.com/sharer/sharer.php?u=https://topworkoutprograms.com/find-a-plan/&amp;t=FIND+A+PLAN" rel="nofollow" onclick="return !window.open(this.href, 'facebook', 'width=500,height=500,left=700,top=150')" target="_blank">
+						<span class="essb_icon icon-facebook"></span>
+						<span class="essb_network_name"><span class="essb_counter_bottom" data-cnt="149" data-cnt-short="149">149</span></span>
+					</a>
+				</li>
+				<li class="essb_item essb_link_twitter nolightbox"> 
+					<a href="https://twitter.com/intent/tweet?text=FIND+A+PLAN&amp;url=https://topworkoutprograms.com/find-a-plan/&amp;counturl=https://topworkoutprograms.com/find-a-plan/"  target="_blank" rel="nofollow" onclick="return !window.open(this.href, 'twitter', 'width=500,height=500,left=700,top=150')" target="_blank">
+						<span class="essb_icon icon-twitter"></span>
+						<span class="essb_network_name"><span class="essb_counter_bottom" data-cnt="4" style="display: none;" data-cnt-short="4">4</span></span>
+					</a>
+				</li>
+				<li class="essb_item essb_link_pinterest nolightbox"> 
+					<a href="#" title="" onclick="essb.pinterest_picker('1590548096'); return false;" target="_blank" rel="nofollow">
+						<span class="essb_icon icon-pinterest"></span>
+						<span class="essb_network_name"><span class="essb_counter_bottom" data-cnt="" style="display: none;" data-cnt-short="0">0</span></span>
+					</a>
+				</li>
+				<li class="essb_item essb_link_google nolightbox"> 
+					<a href="https://plus.google.com/share?url=https://topworkoutprograms.com/find-a-plan/" title=""  target="_blank" rel="nofollow" onclick="return !window.open(this.href, 'google', 'width=500,height=500,left=700,top=150')" target="_blank">
+						<span class="essb_icon icon-google1"></span>
+						<span class="essb_network_name"><span class="essb_counter_bottom" data-cnt="" style="display: none;" data-cnt-short="0">0</span></span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/script-old.js"></script>
+		<script src="js/script.min.js"></script>
+	</body>
+	</html>

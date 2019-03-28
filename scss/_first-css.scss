@@ -1,0 +1,161 @@
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-up:before {content: "\e316";}
+.icon-left:before {content: "\e907";}
+.icon-right:before {content: "\e908";}
+.icon-down:before {content: "\e909";}
+.icon-google:before {content: "\e900";}
+.icon-pinterest:before {content: "\e90d";}
+.icon-google1:before {content: "\e903";}
+.icon-twitter:before {content: "\e90a";}
+.icon-facebook:before {content: "\e901";}
+.icon-linkedin:before {content: "\e905";}
+.icon-check:before {content: "\e90b";}
+
+html{
+	font-size: $font-size-def;
+	@include br3{
+		font-size: $font-size-def*0.9;
+	}
+}
+
+body{
+	font-family: $HR, "Arial", sans-serif;
+	color: $main-color1;
+	overflow-x: hidden;	
+	min-width: 320px;
+}
+
+a{
+	text-decoration: none;
+	color:  #000000;
+}
+
+.d_flex {
+	@include flex;
+	@include justify-content(space-between);
+	@include align-items(center);
+	@include flex-wrap;
+}
+
+%center-flex{
+	@include flex;
+	@include justify-content(center);
+	@include align-items(center);
+}
+
+.text-center{
+	text-align: center;
+}
+
+.mx-auto{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+ul li{
+	display: inline-block;
+}
+
+input, textarea{
+	-webkit-appearance: none;
+}
+
+textarea{
+	overflow: auto;
+}
+
+@include placeholder{color: #8b8b8b;}
+
+img{
+	max-width: 100%;
+}
+
+.container{
+	max-width: 960px;
+	
+	@include br1{
+		width: 90%;
+	}
+}
+
+.headline{
+	font: 3.6rem/1.028 $HB;
+}
+
+.head{
+	font-size: 2rem;
+}
+
+.pink{
+	color:  $pink-color;
+}
+
+.bg-pink{
+	background: $pink-color;
+}
+
+.bg-blue{
+	background: $blue-color;
+}
+
+.white{
+	color: $main-color2;
+}
+
+.black{
+	color: $main-color3;
+}
+
+.big{
+	text-transform: uppercase;
+}
+
+.text{
+	font: 1.4rem/1.786 $HR;
+}
+
+.text span{
+font-family: $HB;
+}
+
+%hover{
+	background: $pink-color;
+	border-color: $pink-color;
+	a{
+		color: $menu-color;
+	}
+}
+
+img{
+	&.sblack{
+		display: block;
+	}
+	&.swhite{
+		display: none;
+	}
+}
+
+%item{
+	border-right: 1px solid;
+	&:last-child{
+		border-right: none;
+	}
+	@include br2{
+		border-bottom: 1px solid;
+		border-right: none;		
+		&:last-child{
+			border-bottom: none;
+		}
+	}
+}

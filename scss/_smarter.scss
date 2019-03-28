@@ -1,0 +1,60 @@
+.smarter{
+	background: url($img_dir+'smarter_bg.jpg') no-repeat left center #e5f2f4;
+	background-size: cover;
+	padding: 13rem 10% 9rem 0;
+	@media (max-width: 1140px){
+		padding: 7rem 7rem 7rem 0;
+	}
+	@include br1{
+		padding: 7rem 3rem 300px 3rem;
+		background: url($img_dir+'smarter_bg.png') no-repeat left bottom #e5f2f4; 
+		background-size: auto 300px;
+	}
+	&__block{
+		max-width: 43.4rem;
+		margin-left: auto;
+		@include br1{
+			max-width: 100%;
+
+		}
+	}
+	&__head{
+		color: #020202;
+		margin: 1.5rem 0 4rem;
+		@media (max-width: 1140px){
+			margin: 1.5rem 0 2rem;
+		}
+	}
+	&__blue{
+		font: 3.2rem/1.1 $HB;
+		margin-top: 7rem;
+		padding: 4rem 7rem 3rem 3.5rem;
+		@media (max-width: 1140px){
+			padding: 2rem 5rem 2rem 3rem;
+			margin-top: 5rem;
+		}
+	}
+	&__italic{
+		padding: 3.5rem;
+		@media (max-width: 1140px){
+			padding: 2rem 3.5rem;
+		}
+		i{
+			font-family: $HI;
+			color: #000;
+		}
+	}
+	&__btn-block{
+		background: #fff;
+		.text{
+			color: #383838;
+			padding: 3.5rem 3.5rem 10rem;
+			@media (max-width: 1140px){
+				padding: 2rem 3rem 5rem;
+			}
+		}
+		.btn{
+			margin: auto;
+		}
+	}
+}

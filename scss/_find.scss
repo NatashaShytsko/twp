@@ -1,0 +1,29 @@
+.find{
+	background: url($img_dir+'find_bg.jpg') no-repeat right center #000;
+	background-size: auto 100%;
+	padding: 10rem 10% 0;
+	@include br1{
+		padding: 350px 10% 0;
+		background-size: auto 300px;
+		background-position: right top;
+	}
+	@include br3{
+		padding: 350px 3rem 0;
+		text-align: center;
+	}
+	&__text{
+		font-size: 2.1rem;
+		line-height: 1.67;
+		width: 40%;
+		margin: 3rem 0 8rem;
+		@include br1{
+			width: 100%;
+		}
+	}
+	.btn{
+		margin-left: auto;
+		@include br1{
+			margin: 0 auto;
+		}
+	}
+}

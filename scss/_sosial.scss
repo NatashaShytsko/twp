@@ -1,0 +1,131 @@
+.sosial{
+	position: fixed;
+	right: 1rem;
+	top: 160px;
+	z-index: 500;
+	@media (max-width: 768px) , (max-height: 768px){
+		top: auto;
+		right: 50%;
+		@include transform(translateX(50%));
+		bottom: 0;
+	}
+	ul, ul li, ul li a, ul li a .essb_icon, ul li a .essb_network_name{
+		font-family: 'Open Sans',helvetica,arial,sans-serif;
+		line-height: 1em;
+		text-transform: none;
+		border: 0;
+		outline: 0;
+		background-image: none;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		font-size: 100%;
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0;
+		padding: 0;
+		-webkit-box-sizing: content-box;
+		-moz-box-sizing: content-box;
+		box-sizing: content-box;
+		@include transform(translate3d(0,0,0));
+	}
+	ul, ul li{
+		padding: 0!important;
+		margin: 0!important;
+		list-style: none!important;
+		display: block;
+		font-weight: 400;
+		@media (max-width: 768px) , (max-height: 768px){
+			@include flex;
+		}
+	}
+	ul{
+		text-align: left;
+		li{
+			@include transition(All .8s ease);
+			a{
+				@include border-radius(4px);
+				margin: 2px 5px 2px 0;
+				color: #fff!important;
+				text-decoration: none;
+				font-size: 100%;
+				background-clip: padding-box;
+				@include transition(all .2s linear);
+				width: 48px;
+				text-align: center;
+				&:hover, &:focus{
+					background: linear-gradient(to bottom,rgba(0,0,0,.05) 0,rgba(0,0,0,.3) 100%);
+					background-clip: padding-box;
+					@include transition(background 50ms linear);
+					@include transform(translateY(-5px));
+				}
+				.essb_icon{
+					text-align: center;
+					background-color: rgba(0,0,0,.2);
+					width: 32px;
+					height: 32px;
+					@include border-radius(16px);
+					margin: 5px;
+					&:before{
+						font-size: 16px!important;
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						text-align: center;
+						color: #fff;
+					}
+				}
+				.essb_network_name{
+					display: block;
+					font-weight: 700;
+					text-align: center;
+					width: 100%;
+					margin-bottom: 8px;
+					margin-right: 10px;
+					.essb_counter_bottom{
+						color: $main-color2;
+						font-size: 14px;
+					}
+				}
+			}
+			&.essb_link_facebook{
+				a{
+					background-color: #3a579a;
+				}
+			}
+			&.essb_link_twitter{
+				a{
+					background-color: #00abf0;
+					@media (max-width: 768px), (max-height: 768px){
+						@include flex;
+						@include justify-content(center);
+						@include align-items(center);
+						flex-direction: column;
+					}
+				}
+			}
+			&.essb_link_pinterest{
+				a{
+					background-color: #cd1c1f;
+					@media (max-width: 768px), (max-height: 768px){
+						@include flex;
+						@include justify-content(center);
+						@include align-items(center);
+						flex-direction: column;
+					}
+				}
+			}
+			&.essb_link_google{
+				a{
+					background-color: #EA4335;
+					@media (max-width: 768px), (max-height: 768px){
+						@include flex;
+						@include justify-content(center);
+						@include align-items(center);
+						flex-direction: column;
+					}
+				}
+			}
+		}
+	}
+}

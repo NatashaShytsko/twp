@@ -1,0 +1,79 @@
+.list{
+	background: url($img_dir+'list_bg.jpg') no-repeat left top #c9cdd7;
+	background-size: auto 100%;
+	padding: 16rem 0;
+	@include br1{
+	padding: 10em 0 0;
+	background-size: auto 50%;
+		}
+			@include br2{
+	padding: 7em 0 0;
+	background-size: auto 38%;
+		}
+
+	&__block{
+		width: 45%;
+		padding: 0 7rem 0 12%;
+		@media (max-width: 1400px){
+			width: 50%
+		}
+		@include br1{
+			width: 75%;
+			margin-bottom: 3rem;
+			padding: 0 5rem;
+			margin-left: auto;
+		}
+			@include br2{
+			width: 85%;
+			padding: 0 3rem;
+		}
+	}
+	&__head{
+		color: #020202;
+		margin-top: 2.5rem;
+	}
+	&__text{
+		margin-top: 4rem;
+	}
+	&__items{
+		width: 55%;
+		@include flex;
+		flex-direction: column;
+		@media (max-width: 1400px){
+			width: 50%
+		}
+			@include br1{
+			width: 100%;
+		}
+	}
+	&__item{
+		@extend %center-flex;
+		@include align-items(stretch);
+		width: 100%;
+		margin: .5rem 0;
+		&-text{
+			background: white;
+			width: calc(100% - 138px);
+			padding: 4rem 2.5rem;
+				@include br2{
+					width: calc(100% - 100px);
+			}
+				@include br3{
+					padding: 3rem 1.5rem;
+				}
+		}
+		&-head{
+			font-size: 2.2rem;
+			margin-bottom: 1.5rem;
+		}
+	}
+	&__img{
+		min-width: 138px;
+		background: $pink-color;
+		text-align: center;
+		@extend %center-flex;
+			@include br2{
+				min-width: 100px;
+			}
+	}
+}

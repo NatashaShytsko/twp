@@ -1,0 +1,51 @@
+.footer{
+	background: url($img_dir+'footer_bg.jpg') no-repeat center;
+	background-size: cover;
+	padding: 5rem 0 3rem;
+	@include br2{
+		padding: 5rem 0 8rem;
+	}
+	&__menu{
+		margin: 4rem 0 3rem;
+		ul{
+			li{
+				padding: 0 1.5rem;
+				margin: 1rem 0;
+				border-right: 1px solid #5d5d5d;
+				&:last-child{
+					border-right: none;
+				}
+				a{
+					color: #b9b9b9;
+					font-size: 1.3rem;
+					&:hover{
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+	&__social{
+		margin-bottom: 3rem;
+		ul{
+			li{
+				padding: 0 1.5rem;
+				margin: 1rem 0;
+				a{
+					i{
+						font-size: 1.8rem;
+						color: #fff;
+
+						&:hover{
+							color: $yellow-color;
+						}
+					}
+				}
+			}
+		}
+	}
+	&__copyright{
+		color: #6f6f6f;
+		font-size: 1.3rem;
+	}
+}

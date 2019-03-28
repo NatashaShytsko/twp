@@ -1,0 +1,83 @@
+.review{
+	background-color: #201b1f;
+	padding: 9rem 0 6rem;
+	&__head{
+		font-size: 2.2rem;
+		margin-bottom: 6rem;
+	}
+	&__cloud{
+		background-color: #4c4c4c;
+		@include border-radius(2rem);
+		padding: 3rem 4rem;
+		position: relative;
+			@include br3{
+			padding: 3rem 2rem;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			border-style: solid;
+			border-width: 25px 15px 0;
+			border-color: #4c4c4c transparent;
+			display: block;
+			width: 0;
+			z-index: 1;
+			bottom: -25px;
+			right: 7%;
+			@include transform(skew(30deg))
+		}
+	}
+	&__img{
+		width: 123px;
+		@include br3{
+			width: 100%;
+			text-align: center;
+			margin-bottom: 2rem;
+		}
+	}
+	&__text{
+		width: calc(100% - 153px);
+		padding: 1.5rem 10rem;
+		position: relative;
+
+		&:before, &:after{
+			content: '';
+			position: absolute;
+			width: 7.7rem;
+			height: 5.8rem;
+		}
+		&:before{
+			background: url($img_dir+'quote_top.svg') no-repeat center;
+			background-size: 7.7rem 5.8rem;
+			left: 0;
+			top: 0;
+		}
+		&:after{
+			background: url($img_dir+'quote_bottom.svg') no-repeat center;
+			background-size: 7.7rem 5.8rem;
+			right: 0;
+			bottom: 0;
+		}
+				@include br2{
+			width: calc(100% - 133px);
+			padding: 1.5rem 7rem;
+					&:before, &:after{
+			width: 5.5rem;
+			height: 4.1rem;
+		}
+		&:before{
+			background-size: 5.5rem 4.1rem;
+		}
+		&:after{
+			background-size: 5.5rem 4.1rem;
+		}
+		}
+			@include br3{
+			width: 100%;
+			padding: 5rem 3rem;
+		}
+	}
+	&__name{
+		margin-top: 2.5rem;
+	}
+}
