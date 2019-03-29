@@ -446,10 +446,7 @@ img.swhite {
   @media (max-width: 768px), (max-height: 768px) {
     .sosial {
       top: auto;
-      right: 50%;
-      -webkit-transform: translateX(50%);
-      -ms-transform: translateX(50%);
-      transform: translateX(50%);
+      right: 1rem;
       bottom: 0; } }
   .sosial ul, .sosial ul li, .sosial ul li a, .sosial ul li a .essb_icon, .sosial ul li a .essb_network_name {
     font-family: 'Open Sans',helvetica,arial,sans-serif;
