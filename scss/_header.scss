@@ -231,6 +231,9 @@
 					margin-top: 7rem;
 					max-width: 39px;
 						max-height: 39px;
+						@include br3{
+							margin-top: 3rem;
+						}
 				}
 			}
 		}

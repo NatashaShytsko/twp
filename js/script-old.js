@@ -55,21 +55,42 @@ var acff_var={"ajax_url":"null"};
 						default:}
 						if(valide){$(this).closest('.find_step').removeClass('showStepp').addClass('hideStepp');
 						$('.find_step.find_step'+parseInt($(this).attr('step_next'))).removeClass('hideStepp').addClass('showStepp');
-						var marginleft=parseFloat($(".step_progress").width()/5);
-						$(".step_progress .step_bar").css('cssText','width:'+(marginleft*parseInt($(this).attr('step_next')))+'px;');
-						$(".step_progress .step_bar").find(".step_1").css('cssText','width:'+(marginleft)+'px;');
-						$(".step_progress .step_bar").find(".step_"+parseInt($(this).attr('step_next'))).css('cssText','display:inline-block; width:'+(marginleft)+'px;');
+						/*----------change1 start----------*/
+						var marginleft=parseFloat($(".step_bar").width()/parseInt($(this).attr('step_next')))*100/parseFloat($(".step_bar").width());
+						$(".step_progress .step_bar").css('cssText','width:'+(20*parseInt($(this).attr('step_next')))+'%;');
+						$(".step_progress .step_bar").find(".step_1").css('cssText','width:'+(marginleft)+'%;');
+						var stepss=$(".step_progress .step_bar").find(".increase");
+						var stepn = parseInt($(this).attr('step_next'));
+						$(stepss).each(function() {
+							var num = $(this).attr('increase_num');
+							if(num<stepn){	
+								$(this).css('cssText','display:inline-block; width:'+(marginleft)+'%;');
+							}
+						});	
+						$(".step_progress .step_bar").find(".step_"+parseInt($(this).attr('step_next'))).css('cssText','display:inline-block; width:'+(marginleft)+'%;');
+						/*----------change1 end----------*/
 						var step_name='';switch(parseInt($(this).attr('step_next'))){case 2:step_name='.age';break;case 3:step_name='.height';break;case 4:step_name='.weight';break;case 5:step_name='.fitness_goals';break}
 						$('.highlight_current_step span').each(function(){$(this).removeClass('highlightStep')});$('.highlight_current_step span'+step_name).addClass('highlightStep');$('.number_steps').html($(this).attr('step_next')+' out of 5');$('.find_step'+$(this).attr('step_next')).find('input[type="text"]').first().focus()}
 						setTimeout(function(){$(document).find('.error_alert').fadeOut();$(document).find('p.error_alert').remove()},7000)});
-$('.btn-step-prev').on('click',function(event){event.stopPropagation();event.preventDefault();
+$('.btn-step-prev').on('click',function(event){
+	event.stopPropagation();
+	event.preventDefault();
 	$(this).closest('.find_step').removeClass('showStepp').addClass('hideStepp');
 	$('.find_step.find_step'+parseInt($(this).attr('step_prev'))).removeClass('hideStepp').addClass('showStepp');
-	var marginleft=parseFloat($(".step_progress").width()/5);
-	$(".step_progress .step_bar").css('cssText','width:'+marginleft*parseInt($(this).attr('step_prev'))+'px;');
-	$(".step_progress .step_bar").find(".step_1").css('cssText','width:'+marginleft+'px;');
-
+		/*----------change2 start----------*/
+	var marginleft=parseFloat($(".step_bar").width()/parseInt($(this).attr('step_prev')))*100/parseFloat($(".step_bar").width());
+	$(".step_progress .step_bar").css('cssText','width:'+20*parseInt($(this).attr('step_prev'))+'%;');
+	$(".step_progress .step_bar").find(".step_1").css('cssText','width:'+marginleft+'%;');
 	$(".step_progress .step_bar").find(".step_"+(parseInt($(this).attr('step_prev')) + 1)).css('cssText','display:none;');
+	var stepss=$(".step_progress .step_bar").find(".increase");
+	var stepn = parseInt($(this).attr('step_prev'));
+	$(stepss).each(function() {
+		var num = $(this).attr('increase_num');
+		if(num<=stepn){	
+			$(this).css('cssText','display:inline-block; width:'+(marginleft)+'%;');
+		}
+	});
+	/*----------change2 end----------*/
 	var step_name='';switch(parseInt($(this).attr('step_prev'))){case 2:step_name='.age';break;case 3:step_name='.height';break;case 4:step_name='.weight';break;case 1:step_name='.gender';break}
 	$('.highlight_current_step span').each(function(){$(this).removeClass('highlightStep')});$('.highlight_current_step span'+step_name).addClass('highlightStep');
 	$('.number_steps').html($(this).attr('step_prev')+' out of 5');
