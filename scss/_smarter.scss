@@ -1,5 +1,5 @@
 .smarter{
-	background: url($img_dir+'smarter_bg.jpg') no-repeat left center #e5f2f4;
+	background: url($img_dir+'smarter_bg.jpg') no-repeat left center #e3f1f2;
 	background-size: cover;
 	padding: 13rem 10% 9rem 0;
 	@media (max-width: 1140px){
@@ -7,7 +7,7 @@
 	}
 	@include br1{
 		padding: 7rem 3rem 300px 3rem;
-		background: url($img_dir+'smarter_bg.png') no-repeat left bottom #e5f2f4; 
+		background: url($img_dir+'smarter_bg.png') no-repeat left bottom #e3f1f2; 
 		background-size: auto 300px;
 	}
 	&__block{
