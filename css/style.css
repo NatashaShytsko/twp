@@ -804,9 +804,7 @@ img.swhite {
               .plans .find_steps .find_step_content_one .first_step_div .start-survey:hover img.swhite, .plans .find_steps .find_step_content_one .first_step_div .start-survey.selected img.swhite {
                 display: block; }
         .plans .find_steps .find_step_content_one .class-next-step {
-          width: 6rem;
-          height: 6rem;
-          background: #4eb3e6; }
+          display: none; }
       .plans .find_steps .find_step_content_two {
         width: calc(100% - 171px - 5rem); }
         @media (max-width: 992px) {
